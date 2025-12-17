@@ -1136,13 +1136,13 @@ EOF
     PROFILE_FILE="/root/.bashrc"
     if [ -f "/root/.bash_profile" ]; then PROFILE_FILE="/root/.bash_profile"; fi
     
-    ALIAS_CMD="alias menu='/usr/local/bin/zivpn-manager'"
+    ALIAS_CMD="alias zivpn='/usr/local/bin/zivpn-manager'"
     AUTORUN_CMD="/usr/local/bin/zivpn-manager"
 
     grep -qF "$ALIAS_CMD" "$PROFILE_FILE" || echo "$ALIAS_CMD" >> "$PROFILE_FILE"
     grep -qF "$AUTORUN_CMD" "$PROFILE_FILE" || echo "$AUTORUN_CMD" >> "$PROFILE_FILE"
 
-    echo "The 'menu' command is now available."
+    echo "The 'zivpn' command is now available."
     echo "The management menu will now open automatically on login."
     
     echo "-----------------------------------------------------"
